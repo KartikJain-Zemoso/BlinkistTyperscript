@@ -1,0 +1,22 @@
+.reading {
+  margin-bottom: 16px;
+  border-bottom: 1px solid black;
+}
+/* .current {
+    float: right;
+  }
+  .finished {
+    float: left;
+  } */
+.reading-active {
+  color: #22c870;
+  font-weight: 700;
+  border-bottom: 1px solid #22c870;
+}
+.reading-tab {
+  margin-top: 20px;
+}
+.library-wrapper {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
