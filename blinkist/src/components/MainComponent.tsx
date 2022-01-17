@@ -23,6 +23,7 @@ interface LibraryO {
   duration: string;
   isFinished: boolean;
 }
+// Root component Of BlinkistApp
 const MainComponent: React.FC = (props) => {
   const [library, setLibrary] = useState<LibraryO[]>([]);
   useEffect(() => {
