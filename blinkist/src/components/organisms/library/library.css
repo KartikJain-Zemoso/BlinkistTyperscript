@@ -1,6 +1,11 @@
 .reading {
+  margin-top: 20px;
+  padding-bottom: 15px;
   margin-bottom: 16px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #bac8ce;
+  color: #6d787e;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
 }
 /* .current {
     float: right;

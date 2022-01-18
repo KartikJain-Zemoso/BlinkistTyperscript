@@ -17,8 +17,8 @@ interface Book {
 interface Props {
   index: number;
   book: Book;
-  click: (book: Book) => void;
-  finishBook: (book: Book) => void;
+  click?: (book: Book) => void;
+  finishBook?: (book: Book) => void;
 }
 
 const Cards: React.FC<Props> = (props) => {
@@ -26,7 +26,7 @@ const Cards: React.FC<Props> = (props) => {
 
   return (
     <>
-      <div className="col-md-3">
+      <div className="col-md-4">
         <div className="card card-wrapper">
           <Link to={`/books/${props.book.id}`}>
             <img className="card-img-top" src={props.book.url} alt="Card cap" />
@@ -45,12 +45,14 @@ const Cards: React.FC<Props> = (props) => {
                     {" "}
                     <span
                       className="moreHoriz"
-                      onClick={() => props.finishBook(props.book)}
+                      onClick={() => {
+                        if (props.finishBook) props.finishBook(props.book);
+                      }}
                     >
                       <MoreHorizIcon />
                     </span>
                     <br />
-                    <div className="progress">
+                    <div className="progress" data-testid="progressBar">
                       <div
                         className="progress-bar progressbar-width"
                         role="progressbar"
@@ -64,7 +66,7 @@ const Cards: React.FC<Props> = (props) => {
                   <button
                     className="addToLibrary"
                     onClick={() => {
-                      props.click(props.book);
+                      if (props.click) props.click(props.book);
                     }}
                   >
                     {<AddIcon />} Add to Library

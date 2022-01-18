@@ -76,7 +76,16 @@
       "duration": "12-minutes read",
       "name": "Zero",
       "url": "https://images.blinkist.io/images/books/6183be696cee070007a5cd39/1_1/470.jpg",
-      "isFinished": false
+      "isFinished": true
+    },
+    {
+      "id": 4,
+      "author": "Tom Esinmann",
+      "category": "entrepreneurship",
+      "duration": "15-minutes read",
+      "name": "Why StartUp Fails",
+      "url": "https://images.blinkist.io/images/books/616814026cee0700089d6a92/1_1/470.jpg",
+      "isFinished": true
     }
   ]
 }
