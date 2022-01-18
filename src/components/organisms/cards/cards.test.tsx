@@ -43,14 +43,12 @@ describe("Book Card", () => {
       renderBookData(-1, books[0]);
       const bookCardInLibrary = screen.getByText("Dropshipping");
       expect(bookCardInLibrary).toBeTruthy();
-      expect(bookCardInLibrary).toBeVisible();
     });
 
     test("Book Card should have a add button", () => {
       renderBookData(-1, books[0]);
       const bookCardInLibrary = screen.getByRole("button");
       expect(bookCardInLibrary).toBeTruthy();
-      expect(bookCardInLibrary).toBeVisible();
     });
     test("Book Card should not have a add button", () => {
       renderBookData(-1, books[1]);
@@ -58,8 +56,6 @@ describe("Book Card", () => {
         name: "Add to Library",
       });
       expect(bookCardInLibrary).toBeTruthy();
-      expect(bookCardInLibrary).toBeVisible();
-      fireEvent.click(bookCardInLibrary);
     });
   });
 });
