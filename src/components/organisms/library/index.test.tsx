@@ -43,6 +43,8 @@ function renderLibrary() {
   );
 }
 
-test("Book Card should be displayed", () => {
+test("Lirary is loaded", () => {
   renderLibrary();
+  const bookCardInLibrary = screen.getByText("Finished");
+  expect(bookCardInLibrary).toBeTruthy();
 });
