@@ -43,12 +43,7 @@ const Cards: React.FC<Props> = (props) => {
                 {props.index > -1 ? (
                   <>
                     {" "}
-                    <span
-                      className="moreHoriz"
-                      onClick={() => {
-                        if (props.finishBook) props.finishBook(props.book);
-                      }}
-                    >
+                    <span className="moreHoriz">
                       <MoreHorizIcon />
                     </span>
                     <br />

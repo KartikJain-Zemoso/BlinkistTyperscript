@@ -42,12 +42,7 @@ function finishBook() {}
 function renderBookDataWithFunction(index: number, books: Book) {
   render(
     <BrowserRouter>
-      <Cards
-        book={books}
-        index={index}
-        click={addToLibrary}
-        finishBook={finishBook}
-      />
+      <Cards book={books} index={index} click={addToLibrary} />
     </BrowserRouter>
   );
 }
@@ -58,30 +53,33 @@ describe("Book Card", () => {
       renderBookData(-1, books[0]);
       const bookCardInLibrary = screen.getByText("Dropshipping");
       expect(bookCardInLibrary).toBeTruthy();
-      expect(bookCardInLibrary).toBeVisible();
     });
 
     test("Book Card should have a add button", () => {
       renderBookData(-1, books[0]);
       const bookCardInLibrary = screen.getByRole("button");
       expect(bookCardInLibrary).toBeTruthy();
-      expect(bookCardInLibrary).toBeVisible();
     });
     test("Book Card should not have a add button", () => {
-      renderBookData(1, books[1]);
+      renderBookData(-1, books[1]);
       const bookCardInLibrary = screen.getByRole("button", {
         name: "Add to Library",
       });
       expect(bookCardInLibrary).toBeTruthy();
-      expect(bookCardInLibrary).toBeVisible();
+
       fireEvent.click(bookCardInLibrary);
     });
     test("Book Card should have be clicked", () => {
       renderBookDataWithFunction(1, books[0]);
-      const bookCardInLibrary = screen.getByRole("button");
-      fireEvent.click(bookCardInLibrary);
+      const bookCardInLibrary = screen.getByTestId("progressBar");
       expect(bookCardInLibrary).toBeTruthy();
-      expect(bookCardInLibrary).toBeVisible();
+    });
+    test("Book Card should be added to Lirary", () => {
+      renderBookDataWithFunction(-1, books[0]);
+      const bookCardInLibrary = screen.getByRole("button", {
+        name: "Add to Library",
+      });
+      fireEvent.click(bookCardInLibrary);
     });
   });
 });
