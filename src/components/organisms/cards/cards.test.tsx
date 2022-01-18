@@ -79,6 +79,7 @@ describe("Book Card", () => {
     test("Book Card should have be clicked", () => {
       renderBookDataWithFunction(1, books[0]);
       const bookCardInLibrary = screen.getByRole("button");
+      fireEvent.click(bookCardInLibrary);
       expect(bookCardInLibrary).toBeTruthy();
       expect(bookCardInLibrary).toBeVisible();
     });
