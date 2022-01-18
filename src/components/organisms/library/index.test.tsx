@@ -48,3 +48,9 @@ test("Lirary is loaded", () => {
   const bookCardInLibrary = screen.getByText("Finished");
   expect(bookCardInLibrary).toBeTruthy();
 });
+
+test("Tab switch in Library", () => {
+  renderLibrary();
+  const bookCardInLibrary = screen.getByText("Finished");
+  expect(bookCardInLibrary).toBeTruthy();
+});
