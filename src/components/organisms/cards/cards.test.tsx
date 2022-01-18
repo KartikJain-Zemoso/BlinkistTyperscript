@@ -37,6 +37,21 @@ function renderBookData(index: number, books: Book) {
   );
 }
 
+function addToLibrary() {}
+function finishBook() {}
+function renderBookDataWithFunction(index: number, books: Book) {
+  render(
+    <BrowserRouter>
+      <Cards
+        book={books}
+        index={index}
+        click={addToLibrary}
+        finishBook={finishBook}
+      />
+    </BrowserRouter>
+  );
+}
+
 describe("Book Card", () => {
   describe("Book in the Library", () => {
     test("Book Card should be displayed", () => {
@@ -53,13 +68,19 @@ describe("Book Card", () => {
       expect(bookCardInLibrary).toBeVisible();
     });
     test("Book Card should not have a add button", () => {
-      renderBookData(-1, books[1]);
+      renderBookData(1, books[1]);
       const bookCardInLibrary = screen.getByRole("button", {
         name: "Add to Library",
       });
       expect(bookCardInLibrary).toBeTruthy();
       expect(bookCardInLibrary).toBeVisible();
       fireEvent.click(bookCardInLibrary);
+    });
+    test("Book Card should have be clicked", () => {
+      renderBookDataWithFunction(1, books[0]);
+      const bookCardInLibrary = screen.getByRole("button");
+      expect(bookCardInLibrary).toBeTruthy();
+      expect(bookCardInLibrary).toBeVisible();
     });
   });
 });
