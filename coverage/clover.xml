@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1642514142908" clover="3.2.0">
-  <project timestamp="1642514142908" name="All files">
+<coverage generated="1642514754237" clover="3.2.0">
+  <project timestamp="1642514754237" name="All files">
     <metrics statements="5" coveredstatements="4" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="1" elements="11" coveredelements="7" complexity="0" loc="5" ncloc="5" packages="1" files="1" classes="1"/>
     <file name="index.tsx" path="S:\BlinkistTyperscript\src\components\organisms\Navigation\index.tsx">
       <metrics statements="5" coveredstatements="4" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="1"/>
