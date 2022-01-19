@@ -4,6 +4,7 @@ import Library from ".";
 import axios from "axios";
 
 import { BrowserRouter } from "react-router-dom";
+const mockedAxios = axios as jest.Mocked<typeof axios>;
 jest.mock("axios");
 interface LibraryO {
   id: number;
@@ -68,7 +69,7 @@ test("Lirary is loaded", () => {
     },
   ];
   const resp = { data: data };
-  axios.get.mockResolvedValue(resp);
+  mockedAxios.get.mockResolvedValue(Promise.resolve(resp));
 });
 
 test("Tab switch in Library", async () => {
