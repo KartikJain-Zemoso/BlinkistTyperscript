@@ -26,17 +26,23 @@ interface Props {
 }
 const CardGrid: React.FC<Props> = (props) => {
   const [books, setBooks] = useState<Book[]>([]);
-
+  const retrieveBooks = async () => {
+    const result = await axios.get("http://localhost:8000/books");
+    console.log(result);
+    return result.data;
+  };
   useEffect(() => {
-    axios.get("http://localhost:8000/books").then((res) => {
-      console.log(res);
-      setBooks(res.data);
-    });
+    const getData = async () => {
+      let books = await retrieveBooks();
+      setBooks(books);
+    };
+    getData();
   }, []);
 
   return (
     <div className="row">
       {books.map((book) => {
+        console.log(book.name);
         let indexOfBook = -1;
         indexOfBook = props.library.map((e) => e.id).indexOf(book.id);
 

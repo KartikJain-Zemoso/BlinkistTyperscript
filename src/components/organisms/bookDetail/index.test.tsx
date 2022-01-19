@@ -1,6 +1,7 @@
 import React from "react";
 import { screen, render, fireEvent } from "@testing-library/react";
 import BookDetail from ".";
+import "@testing-library/jest-dom";
 import { BrowserRouter } from "react-router-dom";
 
 const Library = [
