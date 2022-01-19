@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import Navigation from ".";
 function renderDropDown() {
@@ -11,4 +11,10 @@ function renderDropDown() {
 }
 test("Rendering Navigation", () => {
   renderDropDown();
+});
+
+test("Toggle Nav", () => {
+  renderDropDown();
+  const toggleNav = screen.getByTestId("toggleNav");
+  fireEvent.click(toggleNav);
 });

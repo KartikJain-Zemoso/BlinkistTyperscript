@@ -15,7 +15,10 @@ const Navigation: React.FC = (props) => {
       <div className="navigation">
         <img src={process.env.PUBLIC_URL + "/assets/img/logo.png"} alt="Card" />
         <div className="navLeft">
-          <div onClick={() => toggleDropDown(!dropdownToggle)}>
+          <div
+            data-testid="toggleNav"
+            onClick={() => toggleDropDown(!dropdownToggle)}
+          >
             <NavItems
               title={"Explore"}
               icon={dropdownToggle ? <ExpandLessIcon /> : <ExpandMoreIcon />}
