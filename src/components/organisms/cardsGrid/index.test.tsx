@@ -1,5 +1,5 @@
 import React from "react";
-import { screen, render } from "@testing-library/react";
+import { screen, render, fireEvent } from "@testing-library/react";
 import CardGrid from ".";
 import { BrowserRouter } from "react-router-dom";
 const Library = [
@@ -28,7 +28,11 @@ const MockCardGrid = () => {
   );
 };
 describe("testing Card Grid", () => {
-  test("Rendering CardGrid", () => {
+  test("Rendering CardGrid", async () => {
     render(<MockCardGrid />);
+    const addButton = await screen.findAllByTestId("addButton");
+    fireEvent.click(addButton[0]);
+    const progressBar = screen.getByTestId("progressBar");
+    expect(progressBar).toBeInTheDocument();
   });
 });

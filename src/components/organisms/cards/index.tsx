@@ -60,6 +60,7 @@ const Cards: React.FC<Props> = (props) => {
                 ) : (
                   <button
                     className="addToLibrary"
+                    data-testid="addButton"
                     onClick={() => {
                       if (props.click) props.click(props.book);
                     }}
