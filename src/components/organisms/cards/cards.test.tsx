@@ -38,7 +38,7 @@ function renderBookData(index: number, books: Book) {
 }
 
 function addToLibrary() {}
-
+function finishBook() {}
 function renderBookDataWithFunction(index: number, books: Book) {
   render(
     <BrowserRouter>
