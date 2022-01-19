@@ -1,9 +1,10 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import Library from ".";
+import axios from "axios";
 
 import { BrowserRouter } from "react-router-dom";
-
+jest.mock("axios");
 interface LibraryO {
   id: number;
   url: string;
@@ -46,8 +47,28 @@ function renderLibrary() {
 
 test("Lirary is loaded", () => {
   renderLibrary();
-  const bookCardInLibrary = screen.getByText("Finished");
-  expect(bookCardInLibrary).toBeTruthy();
+  const data = [
+    {
+      id: 1,
+      author: "Carl Reader",
+      category: "entrepreneurship",
+      duration: "13-minutes read",
+      name: "Boss It",
+      url: "https://images.blinkist.io/images/books/6155c3ed6cee070008752e82/1_1/470.jpg",
+      isFinished: false,
+    },
+    {
+      id: 5,
+      name: "Beyond Entrepreneuship 2.0",
+      url: "https://images.blinkist.io/images/books/608bc8bb6cee070008a8f57e/1_1/470.jpg",
+      author: "Jim Collins",
+      duration: "15-minutes read",
+      category: "entrepreneurship",
+      isFinished: true,
+    },
+  ];
+  const resp = { data: data };
+  axios.get.mockResolvedValue(resp);
 });
 
 test("Tab switch in Library", async () => {

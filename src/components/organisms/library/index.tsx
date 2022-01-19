@@ -28,8 +28,13 @@ interface Props {
 const Library: React.FC<Props> = (props) => {
   const [currentTab, toggleTab] = useState("current");
   const [library, setLibrary] = useState<LibraryO[]>([]);
-  const currentBooks = library.filter((book) => book.isFinished === false);
-  const finishedBooks = library.filter((book) => book.isFinished === true);
+  let currentBooks: LibraryO[] = [];
+
+  let finishedBooks: LibraryO[] = [];
+  if (library.length > 0) {
+    currentBooks = library.filter((book) => book.isFinished === false);
+    finishedBooks = library.filter((book) => book.isFinished === true);
+  }
   let currentBookMap: string | null | JSX.Element[];
   currentBookMap = "No Books Available";
   let finishedBooksMap: string | null | JSX.Element[];
@@ -66,7 +71,7 @@ const Library: React.FC<Props> = (props) => {
   console.log(finishedBooks);
   useEffect(() => {
     axios.get("http://localhost:8000/library").then((res) => {
-      console.log(res);
+      console.log(res.data);
       setLibrary(res.data);
     });
   }, []);

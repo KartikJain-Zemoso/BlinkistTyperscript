@@ -5,12 +5,12 @@ import { BrowserRouter } from "react-router-dom";
 const Library = [
   {
     id: 1,
-    author: "Carl Reader",
-    category: "entrepreneurship",
-    duration: "13-minutes read",
     name: "Boss It",
     url: "https://images.blinkist.io/images/books/6155c3ed6cee070008752e82/1_1/470.jpg",
-    isFinished: false,
+    author: "Carl Reader",
+    duration: "13-minutes read",
+    category: "entrepreneurship",
+    isFinished: true,
   },
 ];
 
