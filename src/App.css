@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
-
+@font-face {
+  font-family: "CeraPro";
+  src: url(../public/assets/fonts/Cera\ Pro\ Medium.ttf);
+}
 body {
-  font-family: "PT Sans", sans-serif;
+  font-family: "CeraPro", "PT Sans", sans-serif;
 }
 .App {
   position: relative;

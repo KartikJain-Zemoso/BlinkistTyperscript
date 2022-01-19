@@ -2,6 +2,7 @@ import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import Cards from ".";
 import { BrowserRouter } from "react-router-dom";
+const mockFunction = jest.fn();
 interface Book {
   id: number;
   url: string;

@@ -47,21 +47,6 @@
 .blinkist-cards > svg {
   font-size: 14px !important;
 }
-.addtolibrary {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  color: #0365f2;
-
-  width: 296px;
-  height: 56px;
-  background: #ffffff;
-  border: 1px solid #bac9cf;
-  box-sizing: border-box;
-  border-radius: 0px 0px 4px 4px;
-}
 .addToLibrary:hover {
   background-color: #0365f2;
   color: #fff;
@@ -75,7 +60,7 @@
   color: #0365f2;
   padding: 0 !important;
   width: 100%;
-  height: 56px;
+  height: 46px;
   background: #ffffff;
   border: 1px solid #bac9cf;
   box-sizing: border-box;
@@ -84,6 +69,7 @@
 .p0 {
   padding: 0px !important;
 }
+
 .card-body:hover {
   background-color: #f1f6f4;
 }
@@ -95,6 +81,13 @@
 }
 .card-wrapper {
   margin-top: 10px;
+  width: 90% !important;
+}
+.card-wrapper .card-title {
+  margin-bottom: 5px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.33;
 }
 
 .book-header-wrapper {
