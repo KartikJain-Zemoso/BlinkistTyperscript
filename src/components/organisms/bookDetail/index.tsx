@@ -1,4 +1,5 @@
 import AccessTime from "@material-ui/icons/AccessTime";
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -37,12 +38,10 @@ const BookDetail: React.FC<Props> = (props) => {
 
   const { id } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:8000/books/${id}`)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setBookDetail(data);
-      });
+    axios.get(`http://localhost:8000/books/${id}`).then((res) => {
+      console.log(res);
+      setBookDetail(res.data);
+    });
   }, []);
   let index = props.library.map((e) => e.id).indexOf(bookDetail.id);
   console.log(props.library);

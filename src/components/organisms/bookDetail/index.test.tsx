@@ -31,7 +31,7 @@ const MockBookDetail = () => {
 
 test("Rendering Book Detail", async () => {
   render(<MockBookDetail />);
-  const text = screen.getByText(
+  const text = await screen.findByText(
     /Turning Your Business into an Enduring Great Company/i
   );
   expect(text).toBeInTheDocument();
@@ -39,7 +39,15 @@ test("Rendering Book Detail", async () => {
 
 test("Clicking Finish Book In Book Detail", async () => {
   render(<MockBookDetail />);
-  const finishButton = await screen.findByTestId("finishButton");
-  expect(finishButton).toBeInTheDocument();
+  const finishButton = await screen.findByRole("button", {
+    name: "Finish Reading",
+  });
+  expect(finishButton).toBeTruthy();
   fireEvent.click(finishButton);
+});
+
+test("Click Finish Book In Book Detail", async () => {
+  render(<MockBookDetail />);
+  const finishButton = await screen.findByText(/Finish Reading/i);
+  expect(finishButton).toBeInTheDocument();
 });

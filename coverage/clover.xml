@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1642590697017" clover="3.2.0">
-  <project timestamp="1642590697017" name="All files">
-    <metrics statements="80" coveredstatements="55" conditionals="20" coveredconditionals="14" methods="39" coveredmethods="20" elements="139" coveredelements="89" complexity="0" loc="80" ncloc="80" packages="8" files="8" classes="8"/>
+<coverage generated="1642591293550" clover="3.2.0">
+  <project timestamp="1642591293551" name="All files">
+    <metrics statements="79" coveredstatements="57" conditionals="20" coveredconditionals="14" methods="38" coveredmethods="21" elements="137" coveredelements="92" complexity="0" loc="79" ncloc="79" packages="8" files="8" classes="8"/>
     <package name="components">
       <metrics statements="15" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="3"/>
       <file name="MainComponent.tsx" path="S:\BlinkistTyperscript\src\components\MainComponent.tsx">
@@ -43,22 +43,21 @@
       </file>
     </package>
     <package name="components.organisms.bookDetail">
-      <metrics statements="13" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="7" coveredmethods="3"/>
+      <metrics statements="12" coveredstatements="10" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="4"/>
       <file name="index.tsx" path="S:\BlinkistTyperscript\src\components\organisms\bookDetail\index.tsx">
-        <metrics statements="13" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="7" coveredmethods="3"/>
-        <line num="28" count="2" type="stmt"/>
-        <line num="29" count="3" type="stmt"/>
-        <line num="38" count="2" type="stmt"/>
-        <line num="39" count="2" type="stmt"/>
-        <line num="40" count="2" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="44" count="0" type="stmt"/>
-        <line num="47" count="2" type="stmt"/>
-        <line num="48" count="2" type="stmt"/>
-        <line num="49" count="2" type="stmt"/>
-        <line num="73" count="0" type="stmt"/>
-        <line num="80" count="0" type="stmt"/>
+        <metrics statements="12" coveredstatements="10" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="4"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
+        <line num="42" count="3" type="stmt"/>
+        <line num="43" count="3" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+        <line num="47" count="3" type="stmt"/>
+        <line num="48" count="3" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="79" count="0" type="stmt"/>
       </file>
     </package>
     <package name="components.organisms.cards">
