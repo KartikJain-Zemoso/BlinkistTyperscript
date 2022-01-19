@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">7.14% </span>
+                <span class="strong">64.28% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/14</span>
+                <span class='fraction'>9/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">42.85% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>3/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">7.69% </span>
+                <span class="strong">61.53% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/13</span>
+                <span class='fraction'>8/13</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -193,28 +193,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -296,8 +296,8 @@ interface Props {
   addToLibrary: (book: Book) =&gt; void;
 }
 &nbsp;
-const BookDetail: React.FC&lt;Props&gt; = <span class="fstat-no" title="function not covered" >(p</span>rops) =&gt; {
-  const [bookDetail, setBookDetail] = <span class="cstat-no" title="statement not covered" >useState&lt;Book&gt;({</span>
+const BookDetail: React.FC&lt;Props&gt; = (props) =&gt; {
+  const [bookDetail, setBookDetail] = useState&lt;Book&gt;({
     id: -1,
     url: "",
     name: "",
@@ -306,18 +306,18 @@ const BookDetail: React.FC&lt;Props&gt; = <span class="fstat-no" title="function
     category: "",
   });
 &nbsp;
-  const { id } = <span class="cstat-no" title="statement not covered" >useParams();</span>
-<span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    fetch(`http://localhost:8000/books/${id}`)</span>
+  const { id } = useParams();
+  useEffect(() =&gt; {
+    fetch(`http://localhost:8000/books/${id}`)
       .then(<span class="fstat-no" title="function not covered" >(r</span>es) =&gt; <span class="cstat-no" title="statement not covered" >res.json())</span>
       .then(<span class="fstat-no" title="function not covered" >(d</span>ata) =&gt; {
 <span class="cstat-no" title="statement not covered" >        console.log(data);</span>
 <span class="cstat-no" title="statement not covered" >        setBookDetail(data);</span>
       });
   }, []);
-  let index = <span class="cstat-no" title="statement not covered" >props.library.map(<span class="fstat-no" title="function not covered" >(e</span>) =&gt; <span class="cstat-no" title="statement not covered" >e.id)</span>.indexOf(bookDetail.id);</span>
-<span class="cstat-no" title="statement not covered" >  console.log(props.library);</span>
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  let index = props.library.map((e) =&gt; e.id).indexOf(bookDetail.id);
+  console.log(props.library);
+  return (
     &lt;&gt;
       &lt;div className="book-header-wrapper"&gt;
         &lt;div className="book_header-container"&gt;
@@ -338,7 +338,7 @@ const BookDetail: React.FC&lt;Props&gt; = <span class="fstat-no" title="function
                     Read Now
                   &lt;/button&gt;
                   {index &gt; -1 ? (
-                    &lt;button
+<span class="branch-0 cbranch-no" title="branch not covered" >                    &lt;button</span>
                       className="button button_header_finish_button"
                       onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >props.finishBook(bookDetail)}</span>
                     &gt;
@@ -379,7 +379,7 @@ export default BookDetail;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Jan 19 2022 16:26:48 GMT+0530 (India Standard Time)
+                at Wed Jan 19 2022 16:37:06 GMT+0530 (India Standard Time)
             </div>
         <script src="../../../prettify.js"></script>
         <script>

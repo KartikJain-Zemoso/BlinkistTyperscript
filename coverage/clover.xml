@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1642589808096" clover="3.2.0">
-  <project timestamp="1642589808096" name="All files">
-    <metrics statements="80" coveredstatements="48" conditionals="20" coveredconditionals="13" methods="39" coveredmethods="17" elements="139" coveredelements="78" complexity="0" loc="80" ncloc="80" packages="8" files="8" classes="8"/>
+<coverage generated="1642590426129" clover="3.2.0">
+  <project timestamp="1642590426129" name="All files">
+    <metrics statements="80" coveredstatements="55" conditionals="20" coveredconditionals="14" methods="39" coveredmethods="20" elements="139" coveredelements="89" complexity="0" loc="80" ncloc="80" packages="8" files="8" classes="8"/>
     <package name="components">
       <metrics statements="15" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="3"/>
       <file name="MainComponent.tsx" path="S:\BlinkistTyperscript\src\components\MainComponent.tsx">
@@ -43,20 +43,20 @@
       </file>
     </package>
     <package name="components.organisms.bookDetail">
-      <metrics statements="13" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <metrics statements="13" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="7" coveredmethods="3"/>
       <file name="index.tsx" path="S:\BlinkistTyperscript\src\components\organisms\bookDetail\index.tsx">
-        <metrics statements="13" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="0"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
+        <metrics statements="13" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="7" coveredmethods="3"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
         <line num="41" count="0" type="stmt"/>
         <line num="43" count="0" type="stmt"/>
         <line num="44" count="0" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
+        <line num="47" count="3" type="stmt"/>
+        <line num="48" count="3" type="stmt"/>
+        <line num="49" count="3" type="stmt"/>
         <line num="72" count="0" type="stmt"/>
         <line num="79" count="0" type="stmt"/>
       </file>
