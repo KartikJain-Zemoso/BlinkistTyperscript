@@ -1,6 +1,7 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import Library from ".";
+
 import { BrowserRouter } from "react-router-dom";
 
 interface LibraryO {
@@ -49,8 +50,8 @@ test("Lirary is loaded", () => {
   expect(bookCardInLibrary).toBeTruthy();
 });
 
-test("Tab switch in Library", () => {
+test("Tab switch in Library", async () => {
   renderLibrary();
-  const bookCardInLibrary = screen.getByText("Finished");
+  const bookCardInLibrary = await screen.findByText("Finished");
   expect(bookCardInLibrary).toBeTruthy();
 });

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import Cards from "../cards";
-
+import axios from "axios";
 import "./library.css";
 interface Book {
   id: number;
@@ -65,14 +65,10 @@ const Library: React.FC<Props> = (props) => {
   console.log(currentBooks);
   console.log(finishedBooks);
   useEffect(() => {
-    fetch("http://localhost:8000/library")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        console.log(data);
-        setLibrary(data);
-      });
+    axios.get("http://localhost:8000/library").then((res) => {
+      console.log(res);
+      setLibrary(res.data);
+    });
   }, []);
   return (
     <>
