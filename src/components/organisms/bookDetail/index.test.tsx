@@ -1,5 +1,5 @@
 import React from "react";
-import { screen, render } from "@testing-library/react";
+import { screen, render, fireEvent } from "@testing-library/react";
 import BookDetail from ".";
 import { BrowserRouter } from "react-router-dom";
 
@@ -31,4 +31,15 @@ const MockBookDetail = () => {
 
 test("Rendering Book Detail", async () => {
   render(<MockBookDetail />);
+  const text = screen.getByText(
+    /Turning Your Business into an Enduring Great Company/i
+  );
+  expect(text).toBeInTheDocument();
+});
+
+test("Clicking Finish Book In Book Detail", async () => {
+  render(<MockBookDetail />);
+  const finishButton = await screen.findByTestId("finishButton");
+  expect(finishButton).toBeInTheDocument();
+  fireEvent.click(finishButton);
 });

@@ -69,6 +69,7 @@ const BookDetail: React.FC<Props> = (props) => {
                   {index > -1 ? (
                     <button
                       className="button button_header_finish_button"
+                      data-testid="finishButton"
                       onClick={() => props.finishBook(bookDetail)}
                     >
                       Finish Reading
