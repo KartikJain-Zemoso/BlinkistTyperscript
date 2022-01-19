@@ -3,6 +3,9 @@ import { screen, render, fireEvent } from "@testing-library/react";
 import BookDetail from ".";
 import "@testing-library/jest-dom";
 import { BrowserRouter } from "react-router-dom";
+import axios from "axios";
+const mockedAxios = axios as jest.Mocked<typeof axios>;
+jest.mock("axios");
 
 const Library = [
   {
@@ -39,6 +42,38 @@ const MockBookDetail = () => {
   );
 };
 
+test("Rendering Book Detail with book", async () => {
+  const data = [
+    {
+      id: 1,
+      author: "Carl Reader",
+      category: "entrepreneurship",
+      duration: "13-minutes read",
+      name: "Boss It",
+      url: "https://images.blinkist.io/images/books/6155c3ed6cee070008752e82/1_1/470.jpg",
+      isFinished: false,
+    },
+  ];
+  const resp = { data: data };
+  mockedAxios.get.mockResolvedValue(Promise.resolve(resp));
+  render(<MockBookDetail />);
+});
+test("Rendering Book Detail with book not in library", async () => {
+  const data = [
+    {
+      id: 1,
+      author: "Carl Reader",
+      category: "entrepreneurship",
+      duration: "13-minutes read",
+      name: "Boss It",
+      url: "https://images.blinkist.io/images/books/6155c3ed6cee070008752e82/1_1/470.jpg",
+      isFinished: true,
+    },
+  ];
+  const resp = { data: data };
+  mockedAxios.get.mockResolvedValue(Promise.resolve(resp));
+  render(<MockBookDetail />);
+});
 test("Rendering Book Detail", async () => {
   render(<MockBookDetail />);
   const text = await screen.findByText(
