@@ -51,7 +51,6 @@ test("Rendering Book Detail with book", async () => {
       duration: "13-minutes read",
       name: "Boss It",
       url: "https://images.blinkist.io/images/books/6155c3ed6cee070008752e82/1_1/470.jpg",
-      isFinished: false,
     },
   ];
   const resp = { data: data };
@@ -67,7 +66,7 @@ test("Rendering Book Detail with book not in library", async () => {
       duration: "13-minutes read",
       name: "Boss It",
       url: "https://images.blinkist.io/images/books/6155c3ed6cee070008752e82/1_1/470.jpg",
-      isFinished: true,
+      isFinished: false,
     },
   ];
   const resp = { data: data };
@@ -92,5 +91,10 @@ test("Clicking Finish Book In Book Detail", async () => {
 test("Click Finish Book In Book Detail", async () => {
   render(<MockBookDetail />);
   const finishButton = await screen.findByText(/Finish Reading/i);
+  expect(finishButton).toBeInTheDocument();
+});
+test("Click Add Book In Book Detail", async () => {
+  render(<MockBookDetail />);
+  const finishButton = await screen.findByText(/Add to Library/i);
   expect(finishButton).toBeInTheDocument();
 });

@@ -27,14 +27,14 @@ const Cards: React.FC<Props> = (props) => {
   return (
     <>
       <div className="col-md-4">
-        <div className="card card-wrapper">
+        <div className="card card-wrapper" key={props.book.id}>
           <Link to={`/books/${props.book.id}`}>
             <img className="card-img-top" src={props.book.url} alt="Card cap" />
           </Link>
           <div className="card-body ">
             <h5 className="card-title">{props.book.name}</h5>
             <p className="card-text ">{props.book.author}</p>
-            <p className="card-text ">
+            <p className="card-text-time ">
               {<AccessTimeIcon />}
               {props.book.duration}
             </p>

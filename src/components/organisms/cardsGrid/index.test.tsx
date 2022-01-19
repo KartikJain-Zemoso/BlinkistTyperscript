@@ -2,7 +2,7 @@ import React from "react";
 import { screen, render, fireEvent } from "@testing-library/react";
 import CardGrid from ".";
 import axios from "axios";
-
+import "@testing-library/jest-dom";
 import { BrowserRouter } from "react-router-dom";
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 jest.mock("axios");

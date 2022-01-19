@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1642600337186" clover="3.2.0">
-  <project timestamp="1642600337186" name="All files">
+<coverage generated="1642604047910" clover="3.2.0">
+  <project timestamp="1642604047910" name="All files">
     <metrics statements="88" coveredstatements="81" conditionals="22" coveredconditionals="21" methods="39" coveredmethods="34" elements="149" coveredelements="136" complexity="0" loc="88" ncloc="88" packages="8" files="8" classes="8"/>
     <package name="components">
       <metrics statements="15" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="3"/>
@@ -47,15 +47,15 @@
       <file name="index.tsx" path="S:\BlinkistTyperscript\src\components\organisms\bookDetail\index.tsx">
         <metrics statements="12" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="5"/>
         <line num="29" count="2" type="stmt"/>
-        <line num="30" count="11" type="stmt"/>
-        <line num="39" count="10" type="stmt"/>
-        <line num="40" count="10" type="stmt"/>
-        <line num="41" count="5" type="stmt"/>
-        <line num="42" count="5" type="stmt"/>
-        <line num="43" count="5" type="stmt"/>
-        <line num="46" count="20" type="stmt"/>
-        <line num="47" count="10" type="stmt"/>
-        <line num="48" count="10" type="stmt"/>
+        <line num="30" count="13" type="stmt"/>
+        <line num="39" count="12" type="stmt"/>
+        <line num="40" count="12" type="stmt"/>
+        <line num="41" count="6" type="stmt"/>
+        <line num="42" count="6" type="stmt"/>
+        <line num="43" count="6" type="stmt"/>
+        <line num="46" count="24" type="stmt"/>
+        <line num="47" count="12" type="stmt"/>
+        <line num="48" count="12" type="stmt"/>
         <line num="72" count="0" type="stmt"/>
         <line num="80" count="1" type="stmt"/>
       </file>

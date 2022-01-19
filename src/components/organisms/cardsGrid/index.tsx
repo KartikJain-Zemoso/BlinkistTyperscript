@@ -33,8 +33,8 @@ const CardGrid: React.FC<Props> = (props) => {
   };
   useEffect(() => {
     const getData = async () => {
-      let bookData = await retrieveBooks();
-      setBooks(bookData);
+      let books = await retrieveBooks();
+      setBooks(books);
     };
     getData();
   }, []);

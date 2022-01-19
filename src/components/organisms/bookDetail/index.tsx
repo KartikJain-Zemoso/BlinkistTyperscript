@@ -39,7 +39,7 @@ const BookDetail: React.FC<Props> = (props) => {
   const { id } = useParams();
   useEffect(() => {
     axios.get(`http://localhost:8000/books/${id}`).then((res) => {
-      console.log(res);
+      console.log(res.data);
       setBookDetail(res.data);
     });
   }, []);

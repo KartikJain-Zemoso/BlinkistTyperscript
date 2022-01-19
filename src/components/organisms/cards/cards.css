@@ -181,3 +181,14 @@ a {
 .progressbar-width {
   width: 25% !important;
 }
+.card-text {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #6d787e;
+  margin-bottom: 10px;
+}
+.card-text-time {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
