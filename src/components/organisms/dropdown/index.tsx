@@ -20,7 +20,11 @@ const NaviagtionDropDown: React.FC<Props> = (props) => {
             <div className="navCategory-list-wrapper">
               <ul className="navCategory-list">
                 <Link to="/category/enterpreneurship">
-                  <li className="content" onClick={() => props.onClick(false)}>
+                  <li
+                    className="content"
+                    data-testid="toggleDropdown"
+                    onClick={() => props.onClick(false)}
+                  >
                     <svg
                       width="16"
                       height="23"
@@ -116,7 +120,11 @@ const NaviagtionDropDown: React.FC<Props> = (props) => {
                 </li>
               </ul>
               <ul className="navCategory-list">
-                <li className="content" onClick={() => props.onClick(false)}>
+                <li
+                  className="content"
+                  data-testid="toggleDropdown"
+                  onClick={() => props.onClick(false)}
+                >
                   <svg
                     width="19"
                     height="18"
