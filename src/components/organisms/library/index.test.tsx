@@ -55,3 +55,15 @@ test("Tab switch in Library", async () => {
   const bookCardInLibrary = await screen.findByText("Finished");
   expect(bookCardInLibrary).toBeTruthy();
 });
+
+test("Tab switch", async () => {
+  renderLibrary();
+  const bookCardInLibrary = await screen.findAllByTestId("toggleTab");
+  fireEvent.click(bookCardInLibrary[0]);
+  fireEvent.click(bookCardInLibrary[1]);
+});
+
+test(" Cards Rendered", async () => {
+  renderLibrary();
+  const bookCardInLibrary = await screen.findAllByTestId("progressBar");
+});

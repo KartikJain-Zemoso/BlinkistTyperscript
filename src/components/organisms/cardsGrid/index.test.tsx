@@ -35,4 +35,9 @@ describe("testing Card Grid", () => {
     const progressBar = screen.getByTestId("progressBar");
     expect(progressBar).toBeInTheDocument();
   });
+  test("Rendering Card", async () => {
+    render(<MockCardGrid />);
+    const text = await screen.findByText("Carl Reader");
+    expect(text).toBeInTheDocument();
+  });
 });

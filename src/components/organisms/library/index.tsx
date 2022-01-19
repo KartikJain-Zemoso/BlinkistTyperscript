@@ -76,6 +76,7 @@ const Library: React.FC<Props> = (props) => {
       <div className="row reading-tab">
         <div className="col-md-3 library-wrapper">
           <div
+            data-testid="toggleTab"
             className={
               currentTab === "current" ? "reading reading-active" : "reading"
             }
@@ -86,6 +87,7 @@ const Library: React.FC<Props> = (props) => {
         </div>
         <div className="col-md-3 library-wrapper">
           <div
+            data-testid="toggleTab"
             className={
               currentTab === "finished" ? "reading reading-active" : "reading"
             }
