@@ -84,11 +84,9 @@ test("Rendering Book Detail", async () => {
 
 test("Clicking Finish Book In Book Detail", async () => {
   render(<MockBookDetail />);
-  const finishButton = await screen.findByRole("button", {
-    name: "Finish Reading",
-  });
-  expect(finishButton).toBeTruthy();
-  fireEvent.click(finishButton);
+  const finishButton = await screen.findAllByTestId("finishButton");
+  fireEvent.click(finishButton[0]);
+  fireEvent.click(finishButton[1]);
 });
 
 test("Click Finish Book In Book Detail", async () => {

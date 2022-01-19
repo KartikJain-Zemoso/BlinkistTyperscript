@@ -76,6 +76,7 @@ const BookDetail: React.FC<Props> = (props) => {
                   ) : (
                     <button
                       className="button button_header_finish_button"
+                      data-testid="finishButton"
                       onClick={() => props.addToLibrary(bookDetail)}
                     >
                       Add to Library
