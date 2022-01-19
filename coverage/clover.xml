@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1642587577468" clover="3.2.0">
-  <project timestamp="1642587577468" name="All files">
-    <metrics statements="81" coveredstatements="38" conditionals="20" coveredconditionals="13" methods="40" coveredmethods="12" elements="141" coveredelements="63" complexity="0" loc="81" ncloc="81" packages="8" files="8" classes="8"/>
+<coverage generated="1642589163733" clover="3.2.0">
+  <project timestamp="1642589163733" name="All files">
+    <metrics statements="80" coveredstatements="42" conditionals="20" coveredconditionals="13" methods="39" coveredmethods="14" elements="139" coveredelements="69" complexity="0" loc="80" ncloc="80" packages="8" files="8" classes="8"/>
     <package name="components">
-      <metrics statements="15" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="2"/>
+      <metrics statements="15" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="3"/>
       <file name="MainComponent.tsx" path="S:\BlinkistTyperscript\src\components\MainComponent.tsx">
-        <metrics statements="15" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="2"/>
+        <metrics statements="15" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="3"/>
         <line num="27" count="1" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
         <line num="29" count="1" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
         <line num="35" count="1" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
         <line num="47" count="0" type="stmt"/>
@@ -72,21 +72,20 @@
       </file>
     </package>
     <package name="components.organisms.cardsGrid">
-      <metrics statements="12" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <metrics statements="11" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
       <file name="index.tsx" path="S:\BlinkistTyperscript\src\components\organisms\cardsGrid\index.tsx">
-        <metrics statements="12" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
+        <metrics statements="11" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
         <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
         <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
         <line num="43" count="0" type="stmt"/>
-        <line num="44" count="0" type="stmt"/>
-        <line num="46" count="0" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
       </file>
     </package>
     <package name="components.organisms.dropdown">
@@ -100,9 +99,9 @@
       </file>
     </package>
     <package name="components.organisms.library">
-      <metrics statements="26" coveredstatements="14" conditionals="10" coveredconditionals="5" methods="11" coveredmethods="2"/>
+      <metrics statements="26" coveredstatements="16" conditionals="10" coveredconditionals="5" methods="11" coveredmethods="3"/>
       <file name="index.tsx" path="S:\BlinkistTyperscript\src\components\organisms\library\index.tsx">
-        <metrics statements="26" coveredstatements="14" conditionals="10" coveredconditionals="5" methods="11" coveredmethods="2"/>
+        <metrics statements="26" coveredstatements="16" conditionals="10" coveredconditionals="5" methods="11" coveredmethods="3"/>
         <line num="28" count="2" type="stmt"/>
         <line num="29" count="3" type="stmt"/>
         <line num="30" count="3" type="stmt"/>
@@ -124,8 +123,8 @@
         <line num="66" count="3" type="stmt"/>
         <line num="67" count="3" type="stmt"/>
         <line num="68" count="3" type="stmt"/>
-        <line num="69" count="0" type="stmt"/>
-        <line num="70" count="0" type="stmt"/>
+        <line num="69" count="3" type="stmt"/>
+        <line num="70" count="3" type="stmt"/>
         <line num="73" count="3" type="stmt"/>
         <line num="82" count="0" type="stmt"/>
         <line num="92" count="0" type="stmt"/>

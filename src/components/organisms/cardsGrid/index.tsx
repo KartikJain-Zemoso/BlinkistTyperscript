@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Cards from "../cards";
 
@@ -27,14 +28,10 @@ const CardGrid: React.FC<Props> = (props) => {
   const [books, setBooks] = useState<Book[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/books")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        console.log(data);
-        setBooks(data);
-      });
+    axios.get("http://localhost:8000/books").then((res) => {
+      console.log(res);
+      setBooks(res.data);
+    });
   }, []);
 
   return (

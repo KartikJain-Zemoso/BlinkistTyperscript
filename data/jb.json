@@ -49,25 +49,7 @@
       "duration": "13-minutes read",
       "name": "Boss It",
       "url": "https://images.blinkist.io/images/books/6155c3ed6cee070008752e82/1_1/470.jpg",
-      "isFinished": true
-    },
-    {
-      "id": 2,
-      "author": "Mike Maclowicz",
-      "category": "entrepreneurship",
-      "duration": "13-minutes read",
-      "name": "Get Different",
-      "url": "https://images.blinkist.io/images/books/619533446cee070007d48b4d/1_1/470.jpg",
-      "isFinished": true
-    },
-    {
-      "id": 3,
-      "author": "Charles Seife",
-      "category": "entrepreneurship",
-      "duration": "12-minutes read",
-      "name": "Zero",
-      "url": "https://images.blinkist.io/images/books/6183be696cee070007a5cd39/1_1/470.jpg",
-      "isFinished": true
+      "isFinished": false
     }
   ]
 }

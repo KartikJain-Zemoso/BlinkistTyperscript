@@ -15,7 +15,8 @@ function renderMainComponent() {
 describe("Main Component Testing", () => {
   test("Rendering Main Componet", async () => {
     renderMainComponent();
-    const getContent = await screen.findByText(/My Library/i);
-    expect(getContent).toBeInTheDocument();
+
+    const getContent = await screen.findAllByText(/My Library/i);
+    expect(getContent[0]).toBeInTheDocument();
   });
 });
